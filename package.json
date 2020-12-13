@@ -1,0 +1,33 @@
+{
+  "name": "code002",
+  "version": "0.0.1",
+  "description": "https://github.com/perssBest/MongoDB-bot",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@discordjs/opus": "^0.1.0",
+    "discord.js": "^12.0.2",
+    "ffmpeg-static": "^4.0.1",
+    "fs": "0.0.1-security",
+    "missapi": "0.0.4",
+    "mongoose": "^5.9.6",
+    "ms": "^2.1.2",
+    "parse-ms": "^2.1.0",
+    "random-anime": "^1.0.5",
+    "superagent": "^5.2.2",
+    "vimelib": "^1.0.4",
+    "ytdl-core": "^2.0.1"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "repository": {
+    "url": "https://github.com/perssBest/MongoDB-bot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node"
+  ]
+}
