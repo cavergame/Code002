@@ -15,7 +15,7 @@ module.exports = {
     }
     let pf = new Discord.MessageEmbed()
     .setTitle(`Профиль пользователя: ${member.user.username}`)
-    .setDescription(`[💸] CodeCoins: ${data.money || 0}\n[📤] Уровень: ${data.level || 1}\n[🎇] Опыта:${data.xp || 0}/${config.upXP}\n[📧] Всего сообщений: ${data.messages || 0}\n[🎉] Биография:\n${data.bio || data.prefix + `bio <текст>`}\n\n[📌] Предупреждений: ${data.warn || 0}/${config.warn}`)
+    .setDescription(`[💸] CodeCoins: ${data.money || 0}\n[📧] Всего сообщений: ${data.messages || 0}\n[🎉] Биография:\n${data.bio || data.prefix + `bio <текст>`}\n\n[📌] Предупреждений: ${data.warn || 0}/${config.warn}`)
     message.channel.send(pf)
     })
   }

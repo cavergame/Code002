@@ -1,7 +1,7 @@
 module.exports = {
     name: 'eval',
     description: 'Эмулятор кода',
-    aliases: ["ebal"],
+    aliases: ["эмулятор"],
     public: true,
 async execute(bot, message, args) {
     if (message.author.id !=="590232478086856716") return message.reply(":no_entry: Ошибка! Данную команду могут использовать только разработчики бота! :no_entry:");

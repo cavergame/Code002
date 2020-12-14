@@ -12,7 +12,6 @@ config {
   dataURL - ссылка на базу данных.
 }
 */
-global.randomanime = require("random-anime");
 global.Discord = require('discord.js')
 global.mongoose = require('mongoose')
 global.ms = require('ms')
@@ -65,21 +64,6 @@ bot.on('message', async(message) => {
       message.channel.send(`\`[✅DataBase]\` **${message.author.username}** Успешно был(а) добавлен в базу-данных`)
       user.save().catch(err => message.channel.send(`\`[❌DataBase]\` Произошла ошибка при сохранентии данных в базу-данных. Ошибка: \`\`\`${err}\`\`\``));
     }else{
-      let random = Math.floor(Math.random() * 5)
-      res.money += random
-      res.xp++
-      res.messages++
-      res.save()
-
-      if(res.xp >= config.upXP){
-        let embed = new Discord.MessageEmbed()
-        .setColor(config.color)
-        .setDescription(`[:tada:] Поздравим **${message.author.username}** с новым уровнем!`)
-        message.channel.send(embed)
-        res.xp -= config.upXP;
-        res.level+=1
-        res.save()
-      }
       if(res.warn >= config.warn){
         if(message.member.kickable == false){
            message.reply(`**${message.author.tag}**, у вас было максимальное количество предупреждений, так как у меня нету прав, я не могу вас кикнуть.  Предупреждения были обнулены.`)
