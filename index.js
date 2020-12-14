@@ -21,6 +21,18 @@ global.ytdl = require('ytdl-core');
 global.superagent = require("superagent");
 global.vimeworld = require('vimelib')
 
+var express = require('express');
+var app     = express();
+
+app.set('port', (process.env.PORT || 5000));
+
+app.get('/', function(request, response) {
+    var result = 'App is running'
+    response.send(result);
+}).listen(app.get('port'), function() {
+    console.log('Запуск порта ', app.get('port'));
+});
+
 
 const bot = new Discord.Client()
 bot.commands = new Discord.Collection()
